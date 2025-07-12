@@ -11,7 +11,7 @@ const Users = () => {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {/* Users Details Card */}
+        
           <Link
             href="/dashboard/users/users-details"
             className="block bg-green-50 p-11 rounded-lg shadow-md hover:shadow-lg transition"
@@ -22,7 +22,7 @@ const Users = () => {
             </p>
           </Link>
 
-          {/* Users List Card */}
+         
           <Link
             href="/dashboard/users/users-list"
             className="block bg-orange-50 p-11 rounded-lg shadow-md hover:shadow-lg transition"
