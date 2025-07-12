@@ -47,7 +47,7 @@ const UsersList = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 py-10 px-4 text-gray-700">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 text-gray-700 to-blue-50 py-10 px-4">
       <div className="max-w-6xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
         <h2 className="text-2xl font-bold p-6 border-b">Users List</h2>
         <div className="overflow-x-auto">
@@ -63,7 +63,10 @@ const UsersList = () => {
             </thead>
             <tbody>
               {users.map((user) => (
-                <tr key={user.id} className="border-b hover:bg-gray-50 transition">
+                <tr
+                  key={user.id}
+                  className="border-b hover:bg-gray-50 transition"
+                >
                   <td className="py-4 px-6">{user.name}</td>
                   <td className="py-4 px-6">{user.email}</td>
                   <td className="py-4 px-6">{user.role}</td>
@@ -80,8 +83,13 @@ const UsersList = () => {
                   >
                     {user.status}
                   </td>
-                  <td className="py-4 px-6">
-                    <button className="text-blue-600 hover:underline">View</button>
+                  <td className="py-4 px-6 flex gap-2">
+                    <button className="bg-gray-200 text-gray-800 px-4 py-1 rounded-md hover:bg-gray-300">
+                      Edit
+                    </button>
+                    <button className="bg-blue-600 text-white px-4 py-1 rounded-md hover:bg-blue-700">
+                      View
+                    </button>
                   </td>
                 </tr>
               ))}
